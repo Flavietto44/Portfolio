@@ -128,57 +128,49 @@
 
         /* Seconda pagina*/
 
-        .background-section,
-        .projects-section {
-            display: grid;
-            grid-template-columns: 36% 28% 36%;
-            /* Prima colonna per il titolo, seconda per il testo, terza per extra */
-            align-items: start;
-            gap: 20px;
-            padding-bottom: 40px;
-            /* Aggiunge spazio extra in coda */
+.background-section,
+.projects-section {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola colonna centrata */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 20px;
+    padding-bottom: 40px;
+    max-width: 800px; /* Larghezza massima per contenere il contenuto */
+    margin: 0 auto; /* Centra la sezione nella pagina */
+}
 
-        }
+.background-title,
+.projects-title {
+    text-align: center;
+    color: #8B0000;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+}
 
-        .background-title,
-        .projects-title {
-            text-align: center;
-            /* Allinea il testo del titolo a destra */
-            color: #8B0000;
-            font-size: 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            width: 20%;
-            /* Assicura allineamento uniforme */
-        }
+.background-text,
+.projects-text {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center; /* Cambiato da justify a center */
+    color: #555;
+    line-height: 1.6; /* Migliora la leggibilità */
+}
 
-
-        .background-text,
-        .projects-text {
-            color: #333;
-            font-size: 18px;
-            margin-bottom: 20px;
-            width: 100%;
-            /* Assicura allineamento uniforme */
-            text-align: justify;
-            /* Giustifica il testo */
-            color: #555;
-        }
-
-        .extra-column {
-            display: flex;
-            justify-content: flex-start;
-            /* Allinea gli elementi a sinistra */
-            align-items: flex-start;
-            /* Mantiene l'allineamento verticale */
-            text-align: justify;
-            /* Testo allineato a sinistra */
-            font-size: 16px;
-            width: 20%;
-            /* Assicura allineamento uniforme */
-            color: #555;
-        }
-
+.extra-column {
+    display: flex;
+    justify-content: center; /* Centra gli elementi invece di flex-start */
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+    color: #555;
+    margin: 0 auto; /* Centra la colonna extra */
+}
         video {
             margin-top: 20px;
             /* Regola la distanza dall'alto */
