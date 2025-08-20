@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Flavio Pastore Stocchi</title>
+
+    <style>
+        html,
+        body {
+            background-color: white;
+            font-family: "Aptos", sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            /* Disabilita lo scroll laterale */
+            width: 100vw;
+            /* Previene spostamenti involontari */
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            /* Sposta la sezione più in alto */
+            align-items: flex-start;
+            /* Allinea a sinistra */
+            min-height: 100vh;
+            text-align: left;
+            /* Testo allineato a sinistra */
+            padding-left: 350px;
+            /* Opzionale: aggiunge un margine a sinistra */
+            padding-top: 22vh;
+            /* Regola la posizione verticale */
+
+
+        }
+
+        .profile-img {
+            width: 200px;
+            /* Regola la dimensione */
+            height: 200px;
+            /* Mantieni proporzioni */
+            border-radius: 50%;
+            /* Rende l'immagine circolare */
+            object-fit: cover;
+            /* Evita distorsioni */
+            position: relative;
+            /* Posizione relativa */
+            top: -150px;
+            /* Distanza dal bordo superiore */
+            right: -800px;
+            /* Distanza dal bordo destro */
+        }
+
+
+
+
+        .btnlink {
+            position: relative;
+            top: -300px;
+            /* Distanza dal bordo superiore */
+            left: 1500px;
+            /* Distanza dal bordo sinistro */
+            background: none;
+            color: #8B0000;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btnlink:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+
+        .btnmail {
+            position: relative;
+            top: -300px;
+            /* Distanza dal bordo superiore */
+            left: 1515px;
+            /* Distanza dal bordo sinistro */
+            background: none;
+            color: #8B0000;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btnmail:hover {
+            background-color: #8B0000;
+            color: white;
+        }
+
+
+
+
+
+        .intro {
+            font-size: 60px;
+            margin-bottom: 60px;
+            color: #333;
+        }
+
+        .description {
+            font-size: 34px;
+            color: #555;
+        }
+
+        .undertext {
+            font-size: 20px;
+            color: #555;
+        }
+
+        .highlight {
+            color: #333;
+        }
+
+
+
+
+
+
+        /* Seconda pagina*/
+
+        .background-section,
+        .projects-section {
+            display: grid;
+            grid-template-columns: 36% 28% 36%;
+            /* Prima colonna per il titolo, seconda per il testo, terza per extra */
+            align-items: start;
+            gap: 20px;
+            padding-bottom: 40px;
+            /* Aggiunge spazio extra in coda */
+
+        }
+
+        .background-title,
+        .projects-title {
+            text-align: right;
+            /* Allinea il testo del titolo a destra */
+            color: #8B0000;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+            /* Assicura allineamento uniforme */
+        }
+
+
+        .background-text,
+        .projects-text {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 50px;
+            width: 100%;
+            /* Assicura allineamento uniforme */
+            text-align: justify;
+            /* Giustifica il testo */
+            color: #555;
+        }
+
+        .extra-column {
+            display: flex;
+            justify-content: flex-start;
+            /* Allinea gli elementi a sinistra */
+            align-items: flex-start;
+            /* Mantiene l'allineamento verticale */
+            text-align: justify;
+            /* Testo allineato a sinistra */
+            font-size: 16px;
+            width: 20%;
+            /* Assicura allineamento uniforme */
+            color: #555;
+        }
+
+        video {
+            margin-top: 20px;
+            /* Regola la distanza dall'alto */
+            display: block;
+            width: 100%;
+            /* Adatta alla colonna */
+        }
+
+
+
+
+
+        @media (max-width: 768px) {
+            .container {
+                padding-left: 0;
+                /* Elimina margine sinistro */
+                text-align: center;
+                /* Centra il contenuto */
+                align-items: center;
+                /* Mantiene tutto centrato */
+            }
+
+            .background-section,
+            .projects-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .background-title,
+            .projects-title {
+                text-align: center;
+                width: 100%;
+                /* Assicura allineamento uniforme */
+            }
+
+            .background-text,
+            .projects-text {
+                max-width: 90%;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .btn-container {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .btnlink,
+            .btnmail {
+                display: inline-block;
+                margin: 10px;
+            }
+
+            .extra-column {
+                width: 80%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Intro -->
+    <div class="container">
+        <div class="intro">Hi!</div>
+        <div class="description">
+            I'm <strong class="highlight">Flavio Pastore Stocchi</strong>, a passionate gamer<br>
+            in love with worldbuilding and storytelling.<br><br><br><br><br>
+        </div>
+        <div class="undertext">Game Designer | Environment Artist & Level Designer
+            <br>
+            I look forward to put myself to the test and grow. Bridging technical precision with creative storytelling to build worlds that captivate.
+
+        </div>
+        <img src="Profile pic.jpg" alt="Profile Picture" class="profile-img">
+    </div>
+
+    <a href="https://www.linkedin.com/in/Flavio Pastore Stocchi">
+        <button class="btnlink">LinkedIn</button></a>
+    <a href="mailto:francesco.chiarantini@outlook.com?subject=body=">
+        <button class="btnmail">Mail</button></a>
+
+
+
+    <div class="background-section">
+        <h2 class="background-title">Background</h2>
+
+        My journey into game design began with a two-year foundation in Internet Engineering at Tor Vergata University, where I cultivated problem-solving skills and a systems-thinking mindset. Though excelling in the program, I chose to pivot toward my true passion: gaming and immersive world-building. This unique blend of technical rigor and artistic drive allows me to approach design with both analytical depth and creative flair.
+
+        At Quasar Design Institute, I dedicated three years to mastering 3D environment creation, level design, and game development pipelines, supported by a versatile toolkit:
+
+        Modeling & Sculpting: Maya, Blender, ZBrush
+
+        Texturing & Material Design: Substance 3D Painter & Designer
+
+        Game Engines: Unreal Engine 5 (terrain, lighting, Blueprints)
+
+        Visual Storytelling: Photoshop, Illustrator, Premiere
+
+        Beyond tools, I believe great design is human-centered. As a rugby coach teaching children in schools, I’ve honed my ability to communicate ideas clearly, foster collaboration, and adapt to diverse perspectives—skills I now apply to game design. Whether in game jams or studio projects, I thrive where teams unite around a shared vision, much like on the rugby field.
+
+        My academic exploration of game theory, narrative design, and gaming history further informs my work, ensuring environments are not just visually stunning but rich in purpose and player engagement.
+
+        Now, I seek opportunities in environment art, level design, or game design—in-studio, remote, or abroad—to merge my technical expertise, creative instincts, and team-driven ethos. Let’s create worlds that resonate.
+
+        </p>
+        <div class="extra-column">
+            <p></p>
+        </div>
+    </div>
+
+
+    <div class="projects-section">
+        <h2 class="projects-title">Projects</h2>
+        <video width="550" autoplay muted loop>
+            <source src="Trailer_Dimitria.mp4" type="video/mp4">
+        </video>
+
+
+        <div class="extra-column">
+            <p><strong class="highlight">Dimitria</strong><br>
+                "Dimitria" is a cooperative fantasy RPG where two players must rely on their unique abilities to survive and progress. My primary contribution was the end-to-end creation of the game's semi-open world environment. I was responsible for transforming our collective fantasy vision into a tangible, immersive, and performance-efficient space that serves both narrative and gameplay functions. My work focused on constructing a visually compelling world that guides players intuitively, establishes a strong mood, and facilitates the game's core cooperative combat mechanics.
+
+                Detailed Contribution & Design Philosophy
+                1. Holistic Environment Design & Art Direction
+
+                My goal was to build a world that felt cohesive yet diverse, guiding the player's emotional journey through visual storytelling and careful art direction.
+
+                The Cliffside Landing: I designed the initial landing point to immediately establish the game's fantasy theme and sense of adventure. The introduction of a pod of flying whales serves as a key narrative and visual hook, signaling to players that they are entering a world where the extraordinary is possible. This area sets the tone and provides a clear, awe-inspiring vista before funneling players into the more intimate and tense areas of the map.
+
+                The Blacksmith's Safe Haven: I conceived the initial spawn point inside the blacksmith's house as a deliberate contrast to the outside world. To evoke an immediate sense of safety and clarity, I designed an open area devoid of trees, allowing natural light to flood the space and ensuring no enemy threats were visible. This provides a calm, tutorial-like area where players can orient themselves before the open-world experience begins.
+
+                The Eerie Forest: For this zone, I selected tree models that were visually distinct without being overly complex, aiming for a unique and suggestive atmosphere. I enhanced the environment with scattered fruit plants and roots to achieve a dense, lived-in feel. A specific sub-zone was demarcated with white trees, designated as the territory of wolves that use the pale vegetation for camouflage. Strategically placed rocks provide cover for ambushes, increasing tension during exploration.
+
+                The Skeleton Caves: To create a dark and mysterious atmosphere for this combat-heavy area, I utilized dark rock formations and a muted lighting scheme. I employed subtle natural light from small holes in the cavern ceiling and introduced statues holding magma gems that emit a warm, diffuse glow. This lighting not only builds atmosphere but also helps guide players through the space and highlight points of interest.
+
+                The Final Boss Arena: Situated at the foot of a dark-toned mountain, this arena was designed for a climactic battle. Surrounded by dead trees and an ancient wall, the area feels oppressive and significant. The approach road offers panoramic views of the entire map, providing players with a moment of reflection and a visual reward for their progress before the final challenge.
+
+                2. Technical Execution & Performance Optimization
+
+                A significant and novel challenge for me was ensuring the environment ran smoothly.
+
+                Level of Detail (LOD) Management: I dedicated substantial effort to optimizing the map's performance by meticulously creating and adjusting LODs for environmental assets. This was crucial in reducing in-game lag and maintaining a stable framerate, ensuring a seamless player experience even in dense areas like the forest.
+
+                Blueprint Implementation & Bug Fixing: I took ownership of placing and troubleshooting gameplay blueprints within the level. This involved close collaboration with programmers and animators to ensure enemy spawners, interactive objects, and triggers functioned correctly within the designed space.
+
+                3. Gameplay Integration & Balancing
+
+                My role extended beyond aesthetics to encompass core gameplay functionality.
+
+                Playtesting & Combat Balancing: Through numerous playtesting sessions, I was instrumental in gathering data and feedback to help balance enemy damage output and player character stats. The goal was to achieve a difficulty curve that was challenging yet fair and, most importantly, fun.
+
+                Encounter Design: I strategically placed environmental assets like rocks and trees to create natural cover and interesting arenas for combat, supporting the game's mechanics where enemies ambush or chase the player.
+
+                Iterative Design: While an ambitious mechanic for areas requiring two-player interaction to access wasn't fully realized, the process was a valuable lesson in iterative design and scoping for our team's capabilities.
+
+                Conclusion & Lessons Learned
+                The development of "Dimitria" was a profound learning experience that solidified my passion for environment and level design. I successfully delivered a map that is both aesthetically pleasing and functionally sound, having overcome the significant technical challenge of performance optimization.
+
+                Most importantly, this project underscored the critical importance of team cohesion. I learned that a united, well-coordinated team can overcome inexperience and numerous obstacles, while a disunited one loses efficiency. This experience stands as a significant starting point in my career—a challenging "first level" that required ingenuity and determination to complete, preparing me for the "final bosses" of the professional game development world. I am eager to apply these comprehensive skills in environment art, technical optimization, and collaborative design to a professional studio environment.</p>
+        </div>
+    </div>
+</body>
+
+</html>
