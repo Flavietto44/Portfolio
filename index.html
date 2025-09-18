@@ -1,4 +1,3 @@
-      <!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -37,45 +36,39 @@
 
         }
 
-
-        .btnlink {
-            position: relative;
-            top: 300px;
-            /* Distanza dal bordo superiore */
-            left: 150px;
-            /* Distanza dal bordo sinistro */
+        
+        .btn-row {
+            max-width: 600px; /* Change this value to your desired width */
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 100;
+        }
+        .btnmail, .btnlink {
             background: none;
             color: #8B0000;
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-
-        .btnlink:hover {
+        .btnmail:hover, .btnlink:hover {
             background-color: #8B0000;
             color: white;
         }
-
-        .btnmail {
-            position: relative;
-            top: 300px;
-            /* Distanza dal bordo superiore */
-            left: 151px;
-            /* Distanza dal bordo sinistro */
-            background: none;
-            color: #8B0000;
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btnmail:hover {
-            background-color: #8B0000;
-            color: white;
+        @media (max-width: 768px) {
+            .btn-row {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+            }
         }
 
 
@@ -109,49 +102,55 @@
 
         /* Seconda pagina*/
 
-.background-section,
-.projects-section {
-    display: grid;
-    grid-template-columns: 1fr; /* Una sola colonna centrata */
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-    gap: 20px;
-    padding-bottom: 40px;
-    max-width: 800px; /* Larghezza massima per contenere il contenuto */
-    margin: 0 auto; /* Centra la sezione nella pagina */
-}
+    .background-section,
+    .projects-section {
+        display: grid;
+        grid-template-columns: 1fr; /* Una sola colonna centrata */
+        justify-content: center; /* Centra orizzontalmente */
+        align-items: center; /* Centra verticalmente */
+        gap: 20px;
+        padding-bottom: 40px;
+        max-width: 800px; /* Larghezza massima per contenere il contenuto */
+        margin: 0 auto; /* Centra la sezione nella pagina */
+    }
+    
+    .background-title,
+    .projects-title {
+        text-align: center;
+        color: #8B0000;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 100%;
+    }
+    
+    .background-text,
+    .projects-text {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center; /* Cambiato da justify a center */
+        color: #555;
+        line-height: 1.6; /* Migliora la leggibilità */
+    }
+    
+    .extra-column {
+        display: flex;
+        justify-content: center; /* Centra gli elementi invece di flex-start */
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+        width: 100%;
+        color: #555;
+        margin: 0 auto; /* Centra la colonna extra */
+    }
+    
+    .left-column, .right-column {
+    flex: 1;
+    min-width: 0;
+    }
 
-.background-title,
-.projects-title {
-    text-align: center;
-    color: #8B0000;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    width: 100%;
-}
-
-.background-text,
-.projects-text {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center; /* Cambiato da justify a center */
-    color: #555;
-    line-height: 1.6; /* Migliora la leggibilità */
-}
-
-.extra-column {
-    display: flex;
-    justify-content: center; /* Centra gli elementi invece di flex-start */
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    width: 100%;
-    color: #555;
-    margin: 0 auto; /* Centra la colonna extra */
-}
    
 
 
@@ -228,7 +227,7 @@
     </div>
 
 <div class="btn-row">
-    <a href="mailto:fpastorestocchi@gmail.com?subject=&body=" target="_blank">
+    <a href="mailto:fpastorestocchi@gmail.com?subject=&body=" >
         <button class="btnmail">Mail</button>
     </a>
     <a href="https://www.linkedin.com/in/flavio-pastore-stocchi/" target="_blank">
@@ -238,16 +237,25 @@
 
     <div class="background-section">
         <h2 class="background-title">Background</h2>
-        My journey into game design began with a two-year foundation in Internet Engineering at Tor Vergata University, where I cultivated problem-solving skills and a systems-thinking mindset. Though excelling in the program, I chose to pivot toward my true passion: gaming and immersive world-building. This unique blend of technical rigor and artistic drive allows me to approach design with both analytical depth and creative flair.
-        At Quasar Design Institute, I dedicated three years to mastering 3D environment creation, level design, and game development pipelines, supported by a versatile toolkit:
-        Modeling & Sculpting: Maya, Blender, ZBrush
-        Texturing & Material Design: Substance 3D Painter & Designer
-        Game Engines: Unreal Engine 5 (terrain, lighting, Blueprints)
-        Visual Storytelling: Photoshop, Illustrator, Premiere
-        Beyond tools, I believe great design is human-centered. As a rugby coach teaching children in schools, I’ve honed my ability to communicate ideas clearly, foster collaboration, and adapt to diverse perspectives—skills I now apply to game design. Whether in game jams or studio projects, I thrive where teams unite around a shared vision, much like on the rugby field.
-        My academic exploration of game theory, narrative design, and gaming history further informs my work, ensuring environments are not just visually stunning but rich in purpose and player engagement.
-        Now, I seek opportunities in environment art, level design, or game design—in-studio, remote, or abroad—to merge my technical expertise, creative instincts, and team-driven ethos. Let’s create worlds that resonate.
+     <p><strong class="highlight">Profile</strong><br>   
+I am a game designer and environment artist driven by a passion for world-building and visual storytelling. My unique background combines a foundation in engineering with a specialized education in 3D game design, allowing me to bridge the gap between creative vision and technical execution. I thrive on crafting immersive, optimized, and player-centric environments that serve both narrative and gameplay. A natural collaborator and strong communicator, I have honed my skills through team projects and intensive game jams.
 
+<p><strong class="highlight">Core Competencies</strong><br>
+My expertise spans the full pipeline of environment creation, from initial concept to final implementation. I am proficient in industry-standard tools including Maya, Blender, and ZBrush for modeling and sculpting, and I utilize Substance 3D Painter and Designer for texturing and material creation. My technical proficiency is strongest in Unreal Engine 5, where I specialize in terrain sculpting, lighting, and Blueprint scripting to bring worlds to life. My core strengths lie in environment and level design, visual storytelling, seamless gameplay integration, performance optimization, and collaborative teamwork.
+
+<p><strong class="highlight">Education</strong><br>
+I dedicated three years to specialized study at the Quasar Design Institute, earning a Diploma in Game Design & 3D Environments. This creative training is underpinned by two years of foundational studies in Internet Engineering at the University of Rome Tor Vergata, which instilled in me a methodical and analytical approach to problem-solving.
+
+<p><strong class="highlight">Project Highlight: Dimitria (Cooperative Fantasy RPG)</strong><br>
+As the Environment Artist and Level Designer for this project, I was entrusted with the end-to-end creation of a semi-open world. My mission was to build a cohesive and diverse landscape that supported the game's narrative and cooperative mechanics. I directed the art and established the mood for all key areas, from the awe-inspiring Cliffside Landing to the tense and eerie forest and the climactic Final Boss Arena.
+
+A significant part of my role involved ensuring technical excellence; I optimized performance through meticulous LOD management and Blueprint debugging. Furthermore, I actively supported combat design by participating in playtesting, tuning difficulty, and designing environmental setups for engaging encounters. The achievement was the successful delivery of a fully realized game world that balanced high visual quality with smooth performance.
+
+<p><strong class="highlight">Additional Experience</strong><br>
+My experience extends beyond traditional game development. My role as a Youth Rugby Coach has been instrumental in developing my leadership, communication, and team-building skills. Furthermore, my active participation in game jams has sharpened my ability to prototype rapidly, iterate on designs, and collaborate effectively under pressure within cross-disciplinary teams.
+
+Interests
+My professional interests are focused on deep world-building, innovative narrative design, the dynamics of cooperative gameplay, and the rich theory and history that underpin the medium of games.
         </p>
         <div class="extra-column">
             <p></p>
@@ -255,14 +263,14 @@
     </div>
 
 
-    <div class="projects-section">
-        <h2 class="projects-title">Projects</h2>
+    <!--<div class="projects-section"> 
+        <h2 class="projects-title">Projects</h2>-->
         <video width="550" autoplay muted loop>
             <source src="Trailer_Dimitria.mp4" type="video/mp4">
         </video>
 
 
-        <div class="extra-column">
+        <!-- <div class="extra-column">
             <p><strong class="highlight">Dimitria</strong><br>
                 "Dimitria" is a cooperative fantasy RPG where two players must rely on their unique abilities to survive and progress. My primary contribution was the end-to-end creation of the game's semi-open world environment. I was responsible for transforming our collective fantasy vision into a tangible, immersive, and performance-efficient space that serves both narrative and gameplay functions. My work focused on constructing a visually compelling world that guides players intuitively, establishes a strong mood, and facilitates the game's core cooperative combat mechanics.
                 Detailed Contribution & Design Philosophy
@@ -290,7 +298,7 @@
 
 
 
-  <!--   <div class="projects-section">
+    <div class="projects-section">
         <h2 class="projects-title"></h2>
         <video width="550" autoplay muted loop>
             <source src="Workshop.mp4" type="video/mp4">
@@ -315,5 +323,4 @@
 </body>
 
 </html>
-
 
